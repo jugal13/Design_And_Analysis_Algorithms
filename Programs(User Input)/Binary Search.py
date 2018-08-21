@@ -10,9 +10,11 @@ def binary_search (A, low, high, key):
 			return binary_search(A, mid+1, high, key)
 	return -1
 
-A = [x for x in range(101)]
+A = list(map(int,input("Enter array of numbers\n").split()))
+key = int(input("Enter key: "))
+A.sort()
 print (A)
 start = time.clock()
-print (binary_search(A,0,len(A)-1,100))
+print (binary_search(A,0,len(A)-1,key))
 end = time.clock()
 print ("Time Taken: "+str(end-start))

@@ -16,15 +16,19 @@ def bellman(graph,source):
 	dist[source] = 0
 	parent = [None]*6
 	edge = []
-	for i in range(6):
+	for i in range(5):
 		for u,v,w in graph:
-			if dist[u] != float("inf") and dist[u]+w <dist[v]:
+			if dist[u] != float("inf") and dist[u]+w < dist[v]:
 				dist[v] = dist[u]+w
 				parent[v] = u
 	for i in range(len(parent)):
 		if parent[i] == None:
 			continue
 		edge.append([parent[i],i])
-	print (edge)
-	print (dist)
-bellman(graph,source)
+	return edge,dist
+edge,dist = bellman(graph,source)
+print("Graph input:")
+for i in graph:
+	print (i)
+print("Edges selcted: ", edge)
+print("Distance: ", dist)

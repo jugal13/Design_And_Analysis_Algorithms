@@ -36,17 +36,22 @@ def merge_sort(A):
 	D = merge(B,C)
 	return D
 
-sizes = [100,200,300,500,1000,2000,3000,5000,6000,8000,10000,50000]
-print ("n\tMerge\tInsertion\tSelection\n")
+final = []
+sizes = list(map(int,input("Enter list of sizes to compare: ").split()))
 for i in sizes:
-	x = random.sample(range(i),i)
+	arr = list(map(int,input("Enter array of numbers: ").split()))
 	tm = clock()
-	xm = merge_sort(x)
+	a = merge_sort(arr)
 	tm = clock() - tm
+	arr = list(map(int,input("Enter array of numbers: ").split()))
 	ti = clock()
-	xi = insertion_sort(x)
+	b = insertion_sort(arr)
 	ti = clock() - ti
+	arr = list(map(int,input("Enter array of numbers: ").split()))
 	ts = clock()
-	xs = selection_sort(x)
+	c = selection_sort
 	ts = clock() - ts
-	print (i,"\t",tm,"\t",ti,"\t",ts,"\n")
+	final.append([i,tm,ti,ts])
+print ("n\tMerge\tInsertion\tSelection\n")
+for i in final:
+	print (str(i[0])+"\t"+str(i[1])+"\t"+str(i[2])+"\t"+str(i[3]))

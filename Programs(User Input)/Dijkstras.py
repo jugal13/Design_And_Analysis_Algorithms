@@ -1,10 +1,3 @@
-graph={
-	1 : { 2 : 10, 5 : 100},
-	2 : { 1 : 10, 3 : 50},
-	3 : { 2 : 50, 4 : 20, 5 : 10},
-	4 : { 3 : 20, 5 : 60},
-	5 : { 1 : 100, 3 : 10, 4 : 60}
-}
 def dijkstras(s):
 	d,visited = [999]*len(graph),[0]*(len(graph))
 	d[s-1] = 0
@@ -23,9 +16,16 @@ def dijkstras(s):
 		visited[node-1] = 1
 		vertices.append(node)
 	return d
+
+graph = {}
+n = int(input("Enter the number of nodes in graph: "))
+for i in n:
+	graph[i+1] = {}
+	no = int(input("Enter the number of nodes connected to %d" % (i+1)))
+	for j in no:
+		node,weight = map(int,input("Enter connected node and weight of edge: "))
+		graph[i+1].update({node:weight})
 for i in graph:
 	print(i,":",graph[i])
 print ("Distance array: ")
 print(dijkstras(1))
-
-#time complexity: O(Elog V)

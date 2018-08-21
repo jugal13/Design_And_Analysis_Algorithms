@@ -20,9 +20,7 @@ def sort_count(arr):
 	C,r = merge_count(A,B)
 	return C,(ra+rb+r)
 
-a = [7,6,5,4,3,2,1]
+a = list(map(int,input("Enter array of numbers").split()))
 b,count = sort_count(a)
 print ("Array: "+str(a))
 print ("Number of inversions: "+str(count))
-#Divide and Conquer
-#Time Complexity O(nlog n)
