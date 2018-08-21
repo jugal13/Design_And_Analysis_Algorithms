@@ -1,17 +1,3 @@
-men = { 
-	'm1' : [ 'w1', 'w2', 'w3' ],
-	'm2' : [ 'w2', 'w3', 'w1' ],
-	'm3' : [ 'w3', 'w2', 'w1' ]
-} 
-women = { 
-	'w1' : [ 'm1', 'm2', 'm3' ],
-	'w2' : [ 'm2', 'm3', 'm1' ],
-	'w3' : [ 'm3', 'm2', 'm1' ] 
-}
-freemen = [ 'm1', 'm2', 'm3' ]
-takenwomen = []
-final = {}
-
 def GS():
 	while freemen:
 		for m in freemen:
@@ -33,6 +19,21 @@ def GS():
 						break
 	return final
 
+men = {}
+women = {}
+freemen = []
+takenwomen = []
+final = {}
+n = int(input("Enter number of men/women: "))
+for i in range(n):
+	man = input("Enter name: ")
+	womenlist = list(input("Enter prefernce for %s: " % man).split(" "))
+	men.update({man:womenlist})
+	freemen.append(man)
+for i in range(n):
+	woman = input("Enter name: ")
+	manlist = list(input("Enter prefernce for %s: " % woman).split(" "))
+	men.update({woman:manlist})
 print ("Prefernce List: ")
 print ("Men: ")
 for i in men:
@@ -42,5 +43,3 @@ for i in women:
 	print(str(i)+": "+str(women[i]))
 print ("Stable Matching: ")
 print(GS())
-
-#Time Complexity is O(n^2)

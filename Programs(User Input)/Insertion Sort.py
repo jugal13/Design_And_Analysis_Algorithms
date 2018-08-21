@@ -9,18 +9,11 @@ def insertion_sort(arr):
 			j -= 1
 		arr[j+1] = key
 	return arr
-a = random.sample(range(100),10)
-b = insertion_sort(a)
-print (a)
-print (b)
+
 print ("n\ttime")
-for n in range(500,5500,500):
-	a = random.sample(range(10000),n)
+for n in range(10,110,10):
+	a = list(map(int,input("enter array of numbers(%d): " % n).split()))
 	start = time.clock()
 	b = insertion_sort(a)
 	end = time.clock()
 	print(str(n)+"\t"+str(end-start))
-
-#Best case O(n)
-#Average case O(n^2)
-#Worst case O(n^2)

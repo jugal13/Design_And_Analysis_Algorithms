@@ -1,19 +1,3 @@
-graph={
-	1 : [ 2, 3 ],
-	2 : [ 1, 3, 4, 5 ],
-	3 : [ 1, 2, 6, 7 ],
-	4 : [ 2, 5, 8, 9 ],
-	5 : [ 2, 4, 9 ],
-	6 : [ 3, 7 ],
-	7 : [ 3, 6 ],
-	8 : [ 4, 9 ],
-	9 : [ 4, 5, 8, 10 ],
-	10 : [ 9 ]
-}
-source = 1
-n = len(graph)
-layer = []
-color = [""]*len(graph)
 def bfs(graph,source,n):
 	tree = []
 	traversal = []
@@ -38,6 +22,13 @@ def bfs(graph,source,n):
 				layer.append(r)
 				i += 1
 	return traversal,tree,layer[:i],color[:i]
+
+graph = {}
+n = int(input("Enter number of nodes: "))
+for i in range(n):
+	nodes = list(map(int,input("Enter the nodes connected to %d: " % (i+1)).split()))
+	graph.update({i+1:nodes})
+source = int(input("Enter source node: "))
 traversal,tree,layer,color = bfs(graph,source,n)
 print ("Graph Input:")
 for i in graph:
