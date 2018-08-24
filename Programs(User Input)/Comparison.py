@@ -39,15 +39,15 @@ def merge_sort(A):
 final = []
 sizes = list(map(int,input("Enter list of sizes to compare: ").split()))
 for i in sizes:
-	arr = list(map(int,input("Enter array of numbers: ").split()))
+	arr = list(map(int,input("Enter array of numbers of size %d: " % i).split()))
 	tm = clock()
 	a = merge_sort(arr)
 	tm = clock() - tm
-	arr = list(map(int,input("Enter array of numbers: ").split()))
+	arr = list(map(int,input("Enter array of numbers of size %d: " % i).split()))
 	ti = clock()
 	b = insertion_sort(arr)
 	ti = clock() - ti
-	arr = list(map(int,input("Enter array of numbers: ").split()))
+	arr = list(map(int,input("Enter array of numbers of size %d: " % i).split()))
 	ts = clock()
 	c = selection_sort
 	ts = clock() - ts

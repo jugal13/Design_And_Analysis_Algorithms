@@ -26,12 +26,12 @@ takenwomen = []
 final = {}
 n = int(input("Enter number of men/women: "))
 for i in range(n):
-	man = input("Enter name: ")
+	man = input("Enter man name: ")
 	womenlist = list(input("Enter prefernce for %s: " % man).split(" "))
 	men.update({man:womenlist})
 	freemen.append(man)
 for i in range(n):
-	woman = input("Enter name: ")
+	woman = input("Enter woman name: ")
 	manlist = list(input("Enter prefernce for %s: " % woman).split(" "))
 	men.update({woman:manlist})
 print ("Prefernce List: ")

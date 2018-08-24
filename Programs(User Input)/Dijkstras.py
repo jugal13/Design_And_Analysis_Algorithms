@@ -19,10 +19,10 @@ def dijkstras(s):
 
 graph = {}
 n = int(input("Enter the number of nodes in graph: "))
-for i in n:
+for i in range(n):
 	graph[i+1] = {}
 	no = int(input("Enter the number of nodes connected to %d" % (i+1)))
-	for j in no:
+	for j in range(no):
 		node,weight = map(int,input("Enter connected node and weight of edge: "))
 		graph[i+1].update({node:weight})
 for i in graph:

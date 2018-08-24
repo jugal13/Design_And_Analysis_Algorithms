@@ -1,9 +1,9 @@
-def bfs(graph,source,n):
+def bfs(graph,source):
 	tree = []
 	traversal = []
 	layer = []
 	i = 0
-	visited = [0]*(n+1)
+	visited = [0]*(len(graph)+1)
 	visited[source] = 1
 	layer.append([source])
 	traversal.append(source)
@@ -29,7 +29,7 @@ for i in range(n):
 	nodes = list(map(int,input("Enter the nodes connected to %d: " % (i+1)).split()))
 	graph.update({i+1:nodes})
 source = int(input("Enter source node: "))
-traversal,tree,layer,color = bfs(graph,source,n)
+traversal,tree,layer,color = bfs(graph,source)
 print ("Graph Input:")
 for i in graph:
 	print(str(i)+": "+str(graph[i]))

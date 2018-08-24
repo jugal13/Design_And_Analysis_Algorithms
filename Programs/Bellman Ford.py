@@ -27,7 +27,7 @@ def bellman(graph,source):
 		edge.append([parent[i],i])
 	return edge,dist
 edge,dist = bellman(graph,source)
-print("Graph input:")
+print("Graph input: ")
 for i in graph:
 	print (i)
 print("Edges selcted: ", edge)

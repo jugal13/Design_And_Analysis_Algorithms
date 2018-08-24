@@ -1,14 +1,3 @@
-graph = [
-	[ 1, 2, 10 ],
-	[ 1, 5, 5 ],
-	[ 2, 4, 6 ],
-	[ 5, 3, 7 ],
-	[ 5, 4, 3 ],
-	[ 2, 3, 1 ],
-	[ 4, 3, 2 ]
-]
-graph.sort(key=lambda x:x[2])
-parent = [-1]*(len(graph)+1)
 def find(i):
 	if parent[i] == -1:
 		return i
@@ -29,6 +18,16 @@ def Kruskals():
 			result.append([u,v,graph[k][2]])
 			union(u,v)
 	return result
+
+graph = []
+parent = [-1]*(len(graph)+1)
+n = int(input("enter the number of nodes: "))
+for i in range(n):
+	no = int(input("Enter the number of nodes connected to %d: " % (i+1)))
+	for j in range(no):
+		node,weight = map(int,input("Enter the node and weight: "))
+		graph.append([(i+1),node,weight])
+graph.sort(key=lambda x:x[2])
 for i in graph:
 	print (i)
 print ("Tree: ")

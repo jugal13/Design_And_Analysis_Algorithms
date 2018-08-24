@@ -1,10 +1,3 @@
-graph={
-	1 : { 2 : 4, 4 : 8 },
-	2 : { 1 : 4, 4 : 1, 3 : 3 },
-	3 : { 2 : 3, 4 : 7, 5 : 8 },
-	4 : { 2 : 1, 3 : 7, 1 : 8, 5 : 3 },
-	5 : { 2 : 8, 4 : 3 }
-}
 def Prims(graph):
 	U,V = set([1]),set(graph.keys())
 	result = []
@@ -20,7 +13,16 @@ def Prims(graph):
 		result.append(mine)
 		U.add(mine[1])
 	return result
+
+graph = {}
+n = int(input("Enter the number of nodes: "))
+for i in range(n):
+	graph[i+1]={}
+	no = int(input("Enter the number of nodes connected to %d" % (i+1)))
+	for j in range(no):
+		node,weight = map(int,input("Enter connected node and weight of edge: "))
+		graph[i+1].update({node:weight})
 for i in graph:
 	print (i,":",graph[i])
 print ("Tree: ")
-print(Prims(graph))
+print (Prims(graph))

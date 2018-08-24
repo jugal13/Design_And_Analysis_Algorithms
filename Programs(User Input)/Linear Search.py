@@ -5,10 +5,10 @@ def linear_search(A,key):
 			return i
 	return -1
 
-A = [x for x in range(10)]
-key = 50
+A = list(map(int,input("Enter array of numbers: ").split()))
+key = int(input("Enter key yo be searched for: "))
 print (A)
 start = time.clock()
-print (linear_search(A))
+print (linear_search(A,key))
 stop = time.clock()
 print (stop-start)

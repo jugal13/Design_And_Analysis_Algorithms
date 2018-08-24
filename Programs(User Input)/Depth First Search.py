@@ -3,7 +3,7 @@ def dfs(graph,source):
 	print (source)
 	for k in graph[source]:
 		if visited[k-1] == 0:
-			dfs(k)
+			dfs(graph,k)
 
 graph = {}
 n = int(input("Enter number of nodes: "))
