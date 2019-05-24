@@ -15,6 +15,7 @@ print b
 print "n\ttime"
 for n in range(500,5500,500):
 	a = list(map(int,raw_input("Enter %d number of elements: " % n)))
+	start = time.clock()
 	b = selection_sort(a)
 	end = time.clock()
 	print str(n),"\t",str(end-start)

@@ -23,7 +23,7 @@ for i in range(n):
 	graph[i+1] = {}
 	no = int(input("Enter the number of nodes connected to %d" % (i+1)))
 	for j in range(no):
-		node,weight = map(int,input("Enter connected node and weight of edge: "))
+		node,weight = map(int,input("Enter connected node and weight of edge: ").split())
 		graph[i+1].update({node:weight})
 for i in graph:
 	print(i,":",graph[i])

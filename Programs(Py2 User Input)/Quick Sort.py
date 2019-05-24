@@ -20,7 +20,7 @@ print (a)
 quick_sort(a,0,len(a)-1)
 print (a)
 for n in range(500,5500,500):
-	L = list(map(int,raw_input("Enter %d number of elements: " % n)))
+	L = list(map(int,raw_input("Enter %d number of elements: " % n).split()))
 	start = time.clock()
 	quick_sort(L,0,(len(L)-1))
 	end = time.clock()

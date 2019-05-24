@@ -25,7 +25,7 @@ n = int(raw_input("enter the number of nodes: "))
 for i in range(n):
 	no = int(raw_input("Enter the number of nodes connected to %d: " % (i+1)))
 	for j in range(no):
-		node,weight = map(int,raw_input("Enter the node and weight: "))
+		node,weight = map(int,raw_input("Enter the node and weight: ").split())
 		graph.append([(i+1),node,weight])
 graph.sort(key=lambda x:x[2])
 for i in graph:
