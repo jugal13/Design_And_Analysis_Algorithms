@@ -18,7 +18,7 @@ graph = {}
 n = int(raw_input("Enter the number of nodes: "))
 for i in range(n):
 	graph[i+1]={}
-	no = int(raw_input("Enter the number of nodes connected to %d" % (i+1)))
+	no = int(raw_input("Enter the number of nodes connected to %d: " % (i+1)))
 	for j in range(no):
 		node,weight = map(int,raw_input("Enter connected node and weight of edge: ").split())
 		graph[i+1].update({node:weight})

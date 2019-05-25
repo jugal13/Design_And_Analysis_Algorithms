@@ -1,4 +1,4 @@
-n = int(raw_input("Enter the number of vertices"))
+n = int(raw_input("Enter the number of vertices: "))
 print "Enter the cost matrix, -1 if no edge exists"
 c = []
 
