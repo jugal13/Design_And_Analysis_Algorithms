@@ -12,7 +12,7 @@ def insertion_sort(arr):
 
 print "n\ttime"
 for n in range(10,110,10):
-	a = list(map(int,raw_input("enter array of numbers(%d): " % n).split()))
+	a = list(map(int,raw_input("Enter array of numbers(%d): " % n).split()))
 	start = time.clock()
 	b = insertion_sort(a)
 	end = time.clock()

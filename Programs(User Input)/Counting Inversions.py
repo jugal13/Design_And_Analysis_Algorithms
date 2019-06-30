@@ -11,6 +11,7 @@ def merge_count(A,B):
 	if B:
 		C += B
 	return C,r
+
 def sort_count(arr):
 	if len(arr) == 1:
 		return arr,0

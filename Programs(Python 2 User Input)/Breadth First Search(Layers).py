@@ -27,9 +27,9 @@ for i in range(n):
 	graph.update({i+1:nodes})
 source = int(raw_input("Enter source node: "))
 traversal,tree,layer = bfs(graph,source,n)
-print ("Graph Input:")
+print "Graph Input:"
 for i in graph:
-	print(str(i)+": "+str(graph[i]))
+	print str(i)+": "+str(graph[i])
 print "\nBFS Tree"
 print tree
 print "\nBFS Layers"

@@ -5,6 +5,7 @@ graph={
 	4 : { 3 : 20, 5 : 60},
 	5 : { 1 : 100, 3 : 10, 4 : 60}
 }
+
 def dijkstras(s):
 	d,visited = [999]*len(graph),[0]*(len(graph))
 	d[s-1] = 0
@@ -23,6 +24,7 @@ def dijkstras(s):
 		visited[node-1] = 1
 		vertices.append(node)
 	return d
+
 for i in graph:
 	print(i,":",graph[i])
 print ("Distance array: ")

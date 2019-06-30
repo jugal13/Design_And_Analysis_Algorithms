@@ -6,6 +6,7 @@ items = {
 }
 W = 7
 M = [[0]*(W+1)]
+
 def matrix(items,M,W):
 	for i in range(1,len(items)+1):
 		row = [0] 
@@ -18,6 +19,7 @@ def matrix(items,M,W):
 				row.append(max(M[i-1][w],vi+M[i-1][w-wi]))
 		M.append(row)
 	return M,M[len(items)][W]
+
 def knapsack(items,M,W):
 	result = []
 	i = len(items)
@@ -29,6 +31,7 @@ def knapsack(items,M,W):
 			k = k-wi
 		i = i-1
 	return result
+	
 M,mat = matrix(items,M,W)
 result = knapsack(items,M,W)
 for i in M:

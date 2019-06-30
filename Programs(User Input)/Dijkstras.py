@@ -25,7 +25,8 @@ for i in range(n):
 	for j in range(no):
 		node,weight = map(int,input("Enter connected node and weight of edge: ").split())
 		graph[i+1].update({node:weight})
+source = int(input("Enter source node: "))
 for i in graph:
 	print(i,":",graph[i])
 print ("Distance array: ")
-print(dijkstras(1))
+print(dijkstras(source))

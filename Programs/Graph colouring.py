@@ -14,6 +14,7 @@ source = 1
 n = len(graph)
 layer = []
 color = [""]*len(graph)
+
 def bfs(graph,source,n):
 	tree = []
 	traversal = []
@@ -38,6 +39,7 @@ def bfs(graph,source,n):
 				layer.append(r)
 				i += 1
 	return traversal,tree,layer[:i],color[:i]
+
 traversal,tree,layer,color = bfs(graph,source,n)
 print ("Graph Input:")
 for i in graph:

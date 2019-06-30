@@ -10,6 +10,7 @@ def matrix(M,W):
 				row.append(max(M[i-1][w],vi+M[i-1][w-wi]))
 		M.append(row)
 	return M,M[len(items)][W]
+
 def knapsack(M,W):
 	result = []
 	i = len(items)
@@ -23,7 +24,7 @@ def knapsack(M,W):
 	return result
 
 items={}
-n = int(input("enter the number of items: "))
+n = int(input("Enter the number of items: "))
 for i in range(n):
 	a = list(map(int,input("Enter the weight and value of %d: " % (i+1)).split()))
 	items.update({(i+1):a})

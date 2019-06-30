@@ -1,5 +1,6 @@
 import random
 import time
+
 def insertion_sort(arr):
 	for i in range(1,len(arr)):
 		key = arr[i]
@@ -9,6 +10,7 @@ def insertion_sort(arr):
 			j -= 1
 		arr[j+1] = key
 	return arr
+
 a = random.sample(range(100),10)
 b = insertion_sort(a)
 print (a)

@@ -1,5 +1,6 @@
 import random
 import time
+
 def merge(A,B):
 	C = []
 	while A and B:
@@ -12,6 +13,7 @@ def merge(A,B):
 	if B:
 		C += B
 	return C
+
 def merge_sort(arr):
 	if len(arr) == 1:
 		return arr

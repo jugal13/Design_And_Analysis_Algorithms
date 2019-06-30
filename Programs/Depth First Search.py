@@ -11,10 +11,12 @@ graph={
 	10 : [ 9 ]
 }
 visited = [0]*10
+
 def dfs(node):
 	visited[node-1] = 1
 	print (node)
 	for k in graph[node]:
 		if visited[k-1] == 0:
 			dfs(k)
+
 dfs(1)

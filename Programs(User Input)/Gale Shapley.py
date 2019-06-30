@@ -42,4 +42,4 @@ print ("Women: ")
 for i in women:
 	print(str(i)+": "+str(women[i]))
 print ("Stable Matching: ")
-print(GS())
+print (GS())

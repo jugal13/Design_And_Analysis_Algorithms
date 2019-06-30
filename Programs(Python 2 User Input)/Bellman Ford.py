@@ -19,9 +19,9 @@ n = int(raw_input("Enter the number of nodes: "))
 for i in range(n):
 	no = int(raw_input("Enter the number of nodes connected to %d: " % (i+1)))
 	for j in range(no):
-		node,weight = map(int,raw_input("enter connected node and weight:\n").split())
+		node,weight = map(int,raw_input("Enter connected node and weight:\n").split())
 		graph.append([i+1,node,weight])
-source = int(raw_input("enter the source node: "))
+source = int(raw_input("Enter the source node: "))
 edge,dist = bellman(graph,source)
 print("Graph input: ")
 for i in graph:

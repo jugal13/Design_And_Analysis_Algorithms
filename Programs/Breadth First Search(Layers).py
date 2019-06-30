@@ -11,6 +11,7 @@ graph={
 	10 : [9]
 }
 source = 1
+
 def bfs(graph,source):
 	tree = []
 	traversal = []
@@ -32,6 +33,7 @@ def bfs(graph,source):
 		layer.append(r)
 		i += 1
 	return traversal,tree,layer[:i]
+
 traversal,tree,layer = bfs(graph,source)
 print ("Graph Input:")
 for i in graph:

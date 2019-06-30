@@ -9,15 +9,18 @@ graph = [
 ]
 graph.sort(key=lambda x:x[2])
 parent = [-1]*(len(graph)+1)
+
 def find(i):
 	if parent[i] == -1:
 		return i
 	else:
 		return find(parent[i])
+
 def union(i,j):
 	i_s = find(i)
 	j_s = find(j)
 	parent[i_s] = j_s
+
 def Kruskals():
 	result = []
 	for k in range(4):
@@ -29,6 +32,7 @@ def Kruskals():
 			result.append([u,v,graph[k][2]])
 			union(u,v)
 	return result
+	
 for i in graph:
 	print (i)
 print ("Tree: ")

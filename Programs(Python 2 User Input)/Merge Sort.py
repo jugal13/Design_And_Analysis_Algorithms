@@ -1,5 +1,6 @@
 import random
 import time
+
 def merge(A,B):
 	C = []
 	while A and B:
@@ -12,6 +13,7 @@ def merge(A,B):
 	if B:
 		C += B
 	return C
+
 def merge_sort(arr):
 	if len(arr) == 1:
 		return arr
@@ -20,13 +22,14 @@ def merge_sort(arr):
 	B = merge_sort(arr[mid+1:])
 	C = merge(A,B)
 	return C
+
 a = random.sample(range(100),10)
 b = merge_sort(a)
 print a
 print b
 print "n\ttime"
 for n in range(500,5500,500):
-	arr = list(map(int,raw_input("Enter array of numbers of size %d: " % i).split()))
+	arr = list(map(int,raw_input("Enter array of numbers of size %d: " % n).split()))
 	tm = time.clock()
 	a = merge_sort(arr)
 	end = time.clock()

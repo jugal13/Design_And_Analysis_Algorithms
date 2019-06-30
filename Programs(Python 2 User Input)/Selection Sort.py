@@ -1,6 +1,8 @@
 import random
 import time
+
 k = 1000
+
 def selection_sort(arr):
 	for i in range(len(arr)):
 		m = i
@@ -8,6 +10,7 @@ def selection_sort(arr):
 			if arr[m] > arr[j]:
 				m = j
 		a[m], arr[i] = arr[i], arr[m]
+
 a = random.sample(range(100),10)
 b = selection_sort(a)
 print a

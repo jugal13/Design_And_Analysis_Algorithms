@@ -38,6 +38,7 @@ def tsp(cost,bound,path_cost,path):
 					tsp(cost,bound_i,path_cost_i,path)
 					path.pop()
 					visited.remove(i)
+
 tsp(c,bound,0,current_path)
 if best_path:
 	best_path.append(0)

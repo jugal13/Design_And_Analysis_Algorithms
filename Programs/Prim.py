@@ -5,6 +5,7 @@ graph={
 	4 : { 2 : 1, 3 : 7, 1 : 8, 5 : 3 },
 	5 : { 2 : 8, 4 : 3 }
 }
+
 def Prims(graph):
 	U,V = set([1]),set(graph.keys())
 	result = []
@@ -20,6 +21,7 @@ def Prims(graph):
 		result.append(mine)
 		U.add(mine[1])
 	return result
+
 for i in graph:
 	print (i,":",graph[i])
 print ("Tree: ")

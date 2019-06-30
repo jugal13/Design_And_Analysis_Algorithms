@@ -3,10 +3,12 @@ def find(i):
 		return i
 	else:
 		return find(parent[i])
+
 def union(i,j):
 	i_s = find(i)
 	j_s = find(j)
 	parent[i_s] = j_s
+
 def Kruskals():
 	result = []
 	for k in range(4):
@@ -21,7 +23,7 @@ def Kruskals():
 
 graph = []
 parent = [-1]*(len(graph)+1)
-n = int(raw_input("enter the number of nodes: "))
+n = int(raw_input("Enter the number of nodes: "))
 for i in range(n):
 	no = int(raw_input("Enter the number of nodes connected to %d: " % (i+1)))
 	for j in range(no):

@@ -10,6 +10,7 @@ graph={
 	9 : [ 4, 5, 8, 10 ],
 	10 : [ 9 ]
 }
+
 def bfs(graph,source):
 	queue = []
 	visited = [0]*len(graph)
@@ -24,6 +25,7 @@ def bfs(graph,source):
 				visited[v-1] = 1
 				queue.append(v) 
 	return traversal
+
 traversal=bfs(graph,1)
 print ("Traversal: ")
 for i in traversal:

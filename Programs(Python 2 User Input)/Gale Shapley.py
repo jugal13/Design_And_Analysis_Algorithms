@@ -38,7 +38,7 @@ print "Prefernce List: "
 print "Men: "
 for i in men:
 	print str(i),": ",str(men[i])
-print ("Women: ")
+print "Women: "
 for i in women:
 	print str(i),": ",str(women[i])
 print "Stable Matching: "

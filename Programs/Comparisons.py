@@ -1,5 +1,6 @@
 import random
 from time import clock
+
 def selection_sort(A) :
 	m = 0
 	for i in range(n-1) :
@@ -9,6 +10,7 @@ def selection_sort(A) :
 				m = j
 		A[i] , A[m] = A[m] , A[i]
 	return A
+
 def insertion_sort(A) :
 	for i in range(1,len(A)) :
 		key = A[i]
@@ -18,6 +20,7 @@ def insertion_sort(A) :
 			j -= 1
 		A[j+1] = key
 	return A
+
 def merge(A,B):
 	m = []
 	if A[0] <= B[0]:
@@ -27,6 +30,7 @@ def merge(A,B):
 	m += A
 	m += B
 	return m
+
 def merge_sort(A):
 	if len(A) <= 1:
 		return A
